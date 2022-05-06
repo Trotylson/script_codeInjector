@@ -2,7 +2,7 @@ import os
 
 
 packet = {
-    'do' : "import os\nprint(os.system('ip a'))",
+    'do' : "import os\nos.system('ip a')",
     'packet_name' : 'warning.txt',
     'start_from' : '/mnt/',
     'looking_for' : 'd'

@@ -22,19 +22,19 @@ Inside script you will find `packet` dictionary:
 You have to edit a `keys` `values` in this packet, for example:
 
     packet = {
-        'do' : "import os\nprint(os.system('ip a'))",
+        'do' : "import os\nos.system('ip a')",
         'packet_name' : 'warning.txt',
         'start_at' : '/mnt/',
         'looking_for' : 'd'
     }
 
 In this example, the script will search for the `d` directory / drive from `mnt`.
-Once it finds the above location, it will start the process of creating a script named `warning.txt`, after which it will implement the requested `import os\nprint(os.system('ip a'))` code inside and then run it.
+Once it finds the above location, it will start the process of creating a script named `warning.txt`, after which it will implement the requested `import os\nos.system('ip a')` code inside and then run it.
 
 Our injected script:
 
     import os
-    print(os.system('ip a'))
+    os.system('ip a')
 
 
 ---
